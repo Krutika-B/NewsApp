@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="7dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="358dp"
+                android:layout_height="49dp"
+                android:layout_alignBottom="@id/source1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="Roboto Slab"
+                android:text="Title1"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/source1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:fontFamily="Roboto Slab"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_alignBottom="@id/shadow_bottom"
+                android:text="Source"
+                android:textSize="12sp"
+                android:textColor="@color/colorTextSubtitle"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/publishedAt1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/source1"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_alignBottom="@id/shadow_bottom"
+                android:text="YYYY-MM-DD"
+                android:textColor="@color/colorTextDate" />
+
+            <ImageView
+                android:id="@+id/shadow_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@id/img"
+                android:src="@drawable/background_shadow" />
+
+            <ProgressBar
+                android:id="@+id/prograss_load_photo"
+                style="@android:style/Widget.Holo.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
