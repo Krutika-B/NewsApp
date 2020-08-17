@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">NewsApplication</string>
+    <string name="app_name">HEADLINES</string>
     <string name="news_error">No News Found, Please try again later</string>
 </resources>
