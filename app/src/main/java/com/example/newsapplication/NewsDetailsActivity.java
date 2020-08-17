@@ -57,6 +57,10 @@ public class NewsDetailsActivity extends DaggerAppCompatActivity {
         imageView = findViewById(R.id.img);
         desc =findViewById(R.id.desc);
         butttonback = findViewById(R.id.button_back);
+        title.setText(selectedNewsTitle);
+        published_ad.setText(selectedNewsPublishedDate);
+        source.setText(selectedNewsSourceTitle);
+        desc.setText(selectedNewsDescription);
         butttonback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
