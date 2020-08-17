@@ -3,6 +3,7 @@ package com.example.newsapplication;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -29,8 +30,6 @@ import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import dagger.android.support.DaggerAppCompatActivity;
-
-import static com.example.newsapplication.viewmodel.NewsResource.NewsStatus.SUCCESS;
 
 
 public class NewsActivity extends DaggerAppCompatActivity implements NewsListAdapter.OnNewsClickListener {
@@ -112,7 +111,8 @@ public class NewsActivity extends DaggerAppCompatActivity implements NewsListAda
 
     @Override
     public void onNewsClick(int position) {
-        //start the new activity
+        Intent newsDetailsIntent = NewsDetailsActivity.newIntent(this, articles.get(position).getSource().getName(), articles.get(position).getDescription(),articles.get(position).getPublishedAt(),articles.get(position).getTitle());
+        startActivity(newsDetailsIntent);
     }
 
 }

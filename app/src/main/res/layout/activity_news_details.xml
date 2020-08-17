@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailsActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/source1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Title1"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:id="@+id/source1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/desc"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Source"
+        android:textColor="@color/colorTextSubtitle"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/publishedAt1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/desc"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toRightOf="@id/source1"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_alignParentBottom="true"
+        android:text="YYYY-MM-DD"
+        android:textColor="@color/colorTextDate" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/source1"
+        android:layout_alignTop="@id/source1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Desc" />
+
+    <ImageView
+        android:id="@+id/shadow_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/img"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/background_shadow" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_back"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="24dp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_arrow_black_back"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@null"
+        app:rippleColor="@color/colorAccent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

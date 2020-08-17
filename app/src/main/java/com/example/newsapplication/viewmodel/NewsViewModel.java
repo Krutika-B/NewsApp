@@ -53,23 +53,5 @@ public class NewsViewModel extends ViewModel {
         return newsResourceLiveData;
     }
 
-//    public boolean getArticleSavedState(int position) {
-//        return articleList.getValue().get(position).getArticleSaved();
-//    }
-
-//    public LiveData<Boolean> saveNewsItem(int position) {
-//        boolean isSuccessfullySaved = repository.saveNewsItem(articleList.getValue().get(position));
-//        saveNewsSuccess.postValue(isSuccessfullySaved);
-//        if (isSuccessfullySaved) {
-//            saveWebViewCache(articleList.getValue().get(position).getUrl());
-//        }
-//        return saveNewsSuccess;
-//    }
-
-    public boolean deleteNewsArticle(Article article) {
-        int result = repository.deleteNewsArticle(article);
-        return result != -1;
-    }
-
 
 }

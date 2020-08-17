@@ -3,6 +3,7 @@ package com.example.newsapplication.di;
 import android.app.Application;
 
 import com.example.newsapplication.BaseApplication;
+import com.example.newsapplication.viewmodel.ViewModelProviderFactory;
 
 import javax.inject.Singleton;
 
@@ -14,6 +15,9 @@ import dagger.android.support.AndroidSupportInjectionModule;
 @Component(
         modules = {
                 AndroidSupportInjectionModule.class,
+                ActivityBuilderModule.class,
+                AppModule.class,
+                ViewModelProviderFactory.class,
         }
 )
 public interface AppComponent extends AndroidInjector<BaseApplication> {
