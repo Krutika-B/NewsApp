@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewsDetailsActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground">
+
     <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
@@ -19,7 +16,7 @@
         android:id="@+id/title1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/source1"
+        android:layout_below="@id/source1"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="32dp"
@@ -35,7 +32,7 @@
         android:id="@+id/source1"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_alignBottom="@id/desc"
+        android:layout_above="@id/desc"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
@@ -48,6 +45,7 @@
         android:text="Source"
         android:textColor="@color/colorTextSubtitle"
         android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/source1"
         android:textSize="12sp"
         android:textStyle="bold" />
 
@@ -56,7 +54,7 @@
         android:id="@+id/publishedAt1"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_alignBottom="@id/desc"
+        android:layout_above="@id/desc"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
@@ -76,7 +74,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/source1"
-        android:layout_alignTop="@id/source1"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="5dp"
@@ -110,4 +107,3 @@
         app:iconTint="@null"
         app:rippleColor="@color/colorAccent" />
 </RelativeLayout>
-</androidx.appcompat.widget.ContentFrameLayout >
